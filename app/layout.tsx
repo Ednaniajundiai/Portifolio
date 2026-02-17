@@ -12,8 +12,18 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Ednan Ferreira da Silva | Desenvolvedor Full Stack & Estrategista",
-  description: "Portfólio de Ednan Ferreira da Silva. Desenvolvimento de ativos digitais focados em reduzir custos e maximizar lucros.",
+  title: "Ednan Ferreira  | Desenvolvedor Full Stack & Estrategista",
+  description: "Portfólio de Ednan Ferreira. Desenvolvimento de ativos digitais focados em reduzir custos e maximizar lucros.",
+  openGraph: {
+    images: [
+      {
+        url: '/ednan_ferreira_da_silva.png',
+        width: 800,
+        height: 600,
+        alt: 'Portfólio de Ednan Ferreira',
+      },
+    ],
+  },
 };
 
 export default function RootLayout({

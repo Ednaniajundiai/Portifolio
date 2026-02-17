@@ -1,6 +1,6 @@
-# Portfólio Ednan Ferreira da Silva
+# Portfólio Ednan Ferreira 
 
-Este é o código fonte do portfólio pessoal de Ednan Ferreira da Silva, desenvolvido com Next.js, Tailwind CSS e Framer Motion.
+Este é o código fonte do portfólio pessoal de Ednan Ferreira , desenvolvido com Next.js, Tailwind CSS e Framer Motion.
 
 ## Estrutura do Projeto
 

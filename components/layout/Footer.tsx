@@ -31,7 +31,7 @@ export function Footer() {
         </div>
 
         <div className="mt-12 pt-8 border-t border-white/5 text-center text-gray-500 text-sm">
-          © {new Date().getFullYear()} Ednan Ferreira da Silva. Todos os direitos reservados.
+          © {new Date().getFullYear()} Ednan Ferreira . Todos os direitos reservados.
         </div>
       </div>
     </footer>

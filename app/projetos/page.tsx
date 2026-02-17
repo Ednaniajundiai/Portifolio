@@ -16,10 +16,18 @@ export default function ProjectsPage() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {projects.map((project, index) => (
+          {projects.map((project, index) => {
+            // @ts-ignore
+            const href = project.externalLink || `/projetos/${project.slug}`;
+            // @ts-ignore
+            const isExternal = !!project.externalLink;
+            
+            return (
             <Link
               key={index}
-              href={`/projetos/${project.slug}`}
+              href={href}
+              target={isExternal ? "_blank" : undefined}
+              rel={isExternal ? "noopener noreferrer" : undefined}
               className="group relative overflow-hidden rounded-xl bg-white/5 border border-white/10 hover:border-primary/50 transition-all duration-300 block"
             >
               <div className="aspect-video w-full bg-gradient-to-br from-gray-800 to-gray-900 group-hover:scale-105 transition-transform duration-500 relative flex items-center justify-center">
@@ -62,7 +70,8 @@ export default function ProjectsPage() {
                 </div>
               </div>
             </Link>
-          ))}
+            );
+          })}
         </div>
       </div>
     </div>

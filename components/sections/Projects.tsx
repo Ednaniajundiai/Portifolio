@@ -18,7 +18,13 @@ export function Projects() {
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        {projects.map((project, index) => (
+        {projects.map((project, index) => {
+          // @ts-ignore
+          const href = project.externalLink || `/projetos/${project.slug}`;
+          // @ts-ignore
+          const isExternal = !!project.externalLink;
+
+          return (
           <motion.div
             key={index}
             initial={{ opacity: 0, y: 20 }}
@@ -60,23 +66,31 @@ export function Projects() {
 
                 <div className="flex gap-3 pt-4 border-t border-white/5">
                   <Link
-                    href={`/projetos/${project.slug}`}
+                    href={href}
+                    target={isExternal ? "_blank" : undefined}
+                    rel={isExternal ? "noopener noreferrer" : undefined}
                     className="flex-1 flex items-center justify-center gap-2 py-2 rounded-lg bg-white text-zinc-950 text-sm font-medium hover:bg-zinc-200 transition-colors"
                   >
-                    Ver Detalhes <ArrowUpRight className="w-4 h-4" />
+                    {isExternal ? "Ver Site" : "Ver Detalhes"} <ArrowUpRight className="w-4 h-4" />
                   </Link>
-                  <Link
-                    href="#"
-                    className="p-2 rounded-lg border border-zinc-700 text-zinc-400 hover:text-white hover:bg-zinc-800 transition-colors"
-                    aria-label="Ver código no GitHub"
-                  >
-                    <Github className="w-5 h-5" />
-                  </Link>
+                  {/* @ts-ignore - Propriedade adicionada dinamicamente */}
+                  {project.githubUrl && (
+                    <Link
+                      // @ts-ignore
+                      href={project.githubUrl}
+                      target="_blank"
+                      className="p-2 rounded-lg border border-zinc-700 text-zinc-400 hover:text-white hover:bg-zinc-800 transition-colors"
+                      aria-label="Ver código no GitHub"
+                    >
+                      <Github className="w-5 h-5" />
+                    </Link>
+                  )}
                 </div>
               </div>
             </div>
           </motion.div>
-        ))}
+          );
+        })}
       </div>
     </section>
   );

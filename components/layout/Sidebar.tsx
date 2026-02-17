@@ -4,28 +4,18 @@ import {
   Home, 
   Briefcase, 
   User, 
-  Mail, 
-  Github, 
-  Linkedin, 
-  Twitter, 
-  Instagram 
+  Mail
 } from "lucide-react";
 import Link from "next/link";
 import { useState } from "react";
 import { ThemeToggle } from "../ui/ThemeToggle";
+import { socialLinks } from "@/lib/data";
 
 const navLinks = [
   { name: "Início", href: "#", icon: Home },
   { name: "Projetos", href: "#projects", icon: Briefcase },
   { name: "Sobre", href: "#about", icon: User },
   { name: "Contato", href: "#contact", icon: Mail },
-];
-
-const socialLinks = [
-  { icon: Github, href: "https://github.com" },
-  { icon: Linkedin, href: "https://linkedin.com" },
-  { icon: Twitter, href: "https://twitter.com" },
-  { icon: Instagram, href: "https://instagram.com" },
 ];
 
 export function Sidebar() {
