@@ -116,13 +116,13 @@ const concepts = [
 
 export default function ZapiIntegrationPage() {
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-white dark:bg-zinc-950">
       {/* Header com botao voltar */}
       <section className="pt-8 pb-4">
         <div className="container mx-auto px-4">
           <Link
             href="/#portfolio"
-            className="inline-flex items-center gap-2 text-gray-400 hover:text-primary transition-colors text-sm"
+            className="inline-flex items-center gap-2 text-zinc-500 dark:text-zinc-400 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors text-sm"
           >
             <ArrowLeft className="w-4 h-4" />
             Voltar ao Portfólio
@@ -134,17 +134,17 @@ export default function ZapiIntegrationPage() {
       <section className="pt-4 pb-10 md:pt-6 md:pb-16">
         <div className="container mx-auto px-4">
           <motion.div {...fadeIn} className="max-w-4xl">
-            <h1 className="text-3xl md:text-5xl font-heading font-bold text-white mt-2 mb-4">
+            <h1 className="text-3xl md:text-5xl font-heading font-bold text-zinc-900 dark:text-white mt-2 mb-4">
               Z-API Integration Service
             </h1>
-            <p className="text-gray-400 text-lg md:text-xl leading-relaxed max-w-3xl mb-6">
+            <p className="text-zinc-600 dark:text-zinc-400 text-lg md:text-xl leading-relaxed max-w-3xl mb-6">
               Serviço de integração robusto para automação de WhatsApp utilizando a Z-API. 
               Atua como um middleware inteligente que gerencia autenticação, sessões e expõe 
               uma API simplificada para outros serviços.
             </p>
 
             <div className="max-w-3xl mb-6">
-              <h3 className="text-white font-semibold text-lg mb-4">O projeto implementa:</h3>
+              <h3 className="text-zinc-900 dark:text-white font-semibold text-lg mb-4">O projeto implementa:</h3>
               <ul className="space-y-2">
                 {[
                   {
@@ -169,10 +169,10 @@ export default function ZapiIntegrationPage() {
                   },
                 ].map((item, i) => (
                   <li key={i} className="flex items-start gap-2">
-                    <div className="w-1.5 h-1.5 rounded-full bg-primary mt-2 shrink-0" />
+                    <div className="w-1.5 h-1.5 rounded-full bg-indigo-600 dark:bg-indigo-500 mt-2 shrink-0" />
                     <div>
-                      <span className="text-white font-medium text-sm">{item.label}</span>
-                      <p className="text-gray-400 text-sm">{item.desc}</p>
+                      <span className="text-zinc-900 dark:text-white font-medium text-sm">{item.label}</span>
+                      <p className="text-zinc-600 dark:text-zinc-400 text-sm">{item.desc}</p>
                     </div>
                   </li>
                 ))}
@@ -189,7 +189,7 @@ export default function ZapiIntegrationPage() {
                     className="w-8 h-8 group-hover:scale-110 transition-transform"
                     style={{ color: tech.color }}
                   />
-                  <span className="text-xs text-gray-400 group-hover:text-white transition-colors">
+                  <span className="text-xs text-zinc-500 dark:text-zinc-400 group-hover:text-zinc-900 dark:group-hover:text-white transition-colors">
                     {tech.name}
                   </span>
                 </div>
@@ -200,18 +200,18 @@ export default function ZapiIntegrationPage() {
       </section>
 
       {/* Problema e Solução */}
-      <section className="py-12 border-t border-white/5">
+      <section className="py-12 border-t border-zinc-200 dark:border-white/5">
         <div className="container mx-auto px-4">
           <motion.div {...fadeIn}>
-            <h2 className="text-2xl md:text-3xl font-heading font-bold text-white mb-8">
+            <h2 className="text-2xl md:text-3xl font-heading font-bold text-zinc-900 dark:text-white mb-8">
               Problema e Solução
             </h2>
 
             <div className="grid lg:grid-cols-3 gap-6">
               {/* Problema */}
-              <div className="bg-red-500/5 border border-red-500/20 rounded-xl p-6">
-                <h3 className="text-lg font-bold text-red-400 mb-4">Problema</h3>
-                <p className="text-gray-400 text-sm mb-4">
+              <div className="bg-red-50 dark:bg-red-500/5 border border-red-200 dark:border-red-500/20 rounded-xl p-6">
+                <h3 className="text-lg font-bold text-red-600 dark:text-red-400 mb-4">Problema</h3>
+                <p className="text-zinc-600 dark:text-zinc-400 text-sm mb-4">
                   Gerenciar conexões de WhatsApp em escala apresenta desafios:
                 </p>
                 <ul className="space-y-3">
@@ -224,16 +224,16 @@ export default function ZapiIntegrationPage() {
                   ].map((item, i) => (
                     <li key={i} className="flex items-start gap-3">
                       <div className="w-1.5 h-1.5 rounded-full bg-red-400 mt-1.5 shrink-0" />
-                      <span className="text-gray-300 text-sm">{item}</span>
+                      <span className="text-zinc-600 dark:text-zinc-300 text-sm">{item}</span>
                     </li>
                   ))}
                 </ul>
               </div>
 
               {/* Solução */}
-              <div className="bg-primary/5 border border-primary/20 rounded-xl p-6">
-                <h3 className="text-lg font-bold text-primary mb-4">Solução</h3>
-                <p className="text-gray-400 text-sm mb-4">
+              <div className="bg-indigo-50 dark:bg-indigo-500/5 border border-indigo-200 dark:border-indigo-500/20 rounded-xl p-6">
+                <h3 className="text-lg font-bold text-indigo-600 dark:text-indigo-400 mb-4">Solução</h3>
+                <p className="text-zinc-600 dark:text-zinc-400 text-sm mb-4">
                   Um middleware dedicado e interface de gestão:
                 </p>
                 <ul className="space-y-3">
@@ -245,16 +245,16 @@ export default function ZapiIntegrationPage() {
                     "Abstração completa da complexidade da Z-API",
                   ].map((item, i) => (
                     <li key={i} className="flex items-start gap-3">
-                      <div className="w-1.5 h-1.5 rounded-full bg-primary mt-1.5 shrink-0" />
-                      <span className="text-gray-300 text-sm">{item}</span>
+                      <div className="w-1.5 h-1.5 rounded-full bg-indigo-600 dark:bg-indigo-500 mt-1.5 shrink-0" />
+                      <span className="text-zinc-600 dark:text-zinc-300 text-sm">{item}</span>
                     </li>
                   ))}
                 </ul>
               </div>
 
               {/* Resultados */}
-              <div className="bg-green-500/5 border border-green-500/20 rounded-xl p-6">
-                <h3 className="text-lg font-bold text-green-400 mb-4">Benefícios</h3>
+              <div className="bg-green-50 dark:bg-green-500/5 border border-green-200 dark:border-green-500/20 rounded-xl p-6">
+                <h3 className="text-lg font-bold text-green-600 dark:text-green-400 mb-4">Benefícios</h3>
                 <ul className="space-y-4">
                   {[
                     {
@@ -277,8 +277,8 @@ export default function ZapiIntegrationPage() {
                     <li key={i} className="flex items-start gap-3">
                       <div className="w-1.5 h-1.5 rounded-full bg-green-400 mt-1.5 shrink-0" />
                       <div>
-                        <span className="text-white font-medium text-sm">{item.label}</span>
-                        <p className="text-gray-400 text-xs mt-0.5">{item.desc}</p>
+                        <span className="text-zinc-900 dark:text-white font-medium text-sm">{item.label}</span>
+                        <p className="text-zinc-600 dark:text-zinc-400 text-xs mt-0.5">{item.desc}</p>
                       </div>
                     </li>
                   ))}
@@ -290,11 +290,11 @@ export default function ZapiIntegrationPage() {
       </section>
 
       {/* Destaques Técnicos */}
-      <section className="py-12 border-t border-white/5">
+      <section className="py-12 border-t border-zinc-200 dark:border-white/5">
         <div className="container mx-auto px-4">
           <motion.h2
             {...fadeIn}
-            className="text-2xl md:text-3xl font-heading font-bold text-white mb-10"
+            className="text-2xl md:text-3xl font-heading font-bold text-zinc-900 dark:text-white mb-10"
           >
             Destaques Técnicos
           </motion.h2>
@@ -306,24 +306,24 @@ export default function ZapiIntegrationPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.4, delay: i * 0.1 }}
                 viewport={{ once: true }}
-                className="bg-white/5 border border-white/10 rounded-xl p-6"
+                className="bg-zinc-50 dark:bg-white/5 border border-zinc-200 dark:border-white/10 rounded-xl p-6"
               >
                 <div className="flex items-center gap-3 mb-4">
-                  <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center">
-                    <item.icon className="w-5 h-5 text-primary" />
+                  <div className="w-10 h-10 rounded-lg bg-indigo-50 dark:bg-indigo-500/10 flex items-center justify-center">
+                    <item.icon className="w-5 h-5 text-indigo-600 dark:text-indigo-400" />
                   </div>
-                  <h3 className="text-white font-bold">{item.title}</h3>
+                  <h3 className="text-zinc-900 dark:text-white font-bold">{item.title}</h3>
                 </div>
                 <div className="space-y-3">
                   <div>
-                    <span className="text-xs font-semibold text-red-400 uppercase">Desafio</span>
-                    <p className="text-gray-400 text-sm mt-1">{item.problem}</p>
+                    <span className="text-xs font-semibold text-red-500 dark:text-red-400 uppercase">Desafio</span>
+                    <p className="text-zinc-600 dark:text-zinc-400 text-sm mt-1">{item.problem}</p>
                   </div>
                   <div>
-                    <span className="text-xs font-semibold text-primary uppercase">Solução</span>
-                    <p className="text-gray-400 text-sm mt-1">{item.solution}</p>
+                    <span className="text-xs font-semibold text-indigo-600 dark:text-indigo-400 uppercase">Solução</span>
+                    <p className="text-zinc-600 dark:text-zinc-400 text-sm mt-1">{item.solution}</p>
                   </div>
-                  <p className="text-xs text-gray-500 italic">{item.lines}</p>
+                  <p className="text-xs text-zinc-500 italic">{item.lines}</p>
                 </div>
               </motion.div>
             ))}
@@ -332,11 +332,11 @@ export default function ZapiIntegrationPage() {
       </section>
 
       {/* Stack Tecnológica */}
-      <section className="py-12 border-t border-white/5">
+      <section className="py-12 border-t border-zinc-200 dark:border-white/5">
         <div className="container mx-auto px-4">
           <motion.h2
             {...fadeIn}
-            className="text-2xl md:text-3xl font-heading font-bold text-white mb-10"
+            className="text-2xl md:text-3xl font-heading font-bold text-zinc-900 dark:text-white mb-10"
           >
             Stack Tecnológica
           </motion.h2>
@@ -344,8 +344,8 @@ export default function ZapiIntegrationPage() {
           <div className="space-y-10">
             {/* Backend */}
             <div>
-              <h3 className="text-lg font-bold text-white mb-4 flex items-center gap-2">
-                <Server className="w-5 h-5 text-primary" />
+              <h3 className="text-lg font-bold text-zinc-900 dark:text-white mb-4 flex items-center gap-2">
+                <Server className="w-5 h-5 text-indigo-600 dark:text-indigo-400" />
                 Backend - Python (FastAPI)
               </h3>
               <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
@@ -356,13 +356,13 @@ export default function ZapiIntegrationPage() {
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.3, delay: i * 0.05 }}
                     viewport={{ once: true }}
-                    className="bg-white/5 border border-white/10 rounded-lg p-4"
+                    className="bg-zinc-50 dark:bg-white/5 border border-zinc-200 dark:border-white/10 rounded-lg p-4"
                   >
                     <div className="flex items-center justify-between mb-2">
-                      <span className="text-white font-semibold text-sm">{tech.name}</span>
-                      {tech.version && <span className="text-xs text-gray-500 font-mono">{tech.version}</span>}
+                      <span className="text-zinc-900 dark:text-white font-semibold text-sm">{tech.name}</span>
+                      {tech.version && <span className="text-xs text-zinc-500 font-mono">{tech.version}</span>}
                     </div>
-                    <p className="text-gray-400 text-xs leading-relaxed">{tech.desc}</p>
+                    <p className="text-zinc-600 dark:text-zinc-400 text-xs leading-relaxed">{tech.desc}</p>
                   </motion.div>
                 ))}
               </div>
@@ -370,8 +370,8 @@ export default function ZapiIntegrationPage() {
 
             {/* Frontend */}
             <div>
-              <h3 className="text-lg font-bold text-white mb-4 flex items-center gap-2">
-                <Layout className="w-5 h-5 text-primary" />
+              <h3 className="text-lg font-bold text-zinc-900 dark:text-white mb-4 flex items-center gap-2">
+                <Layout className="w-5 h-5 text-indigo-600 dark:text-indigo-400" />
                 Frontend - React
               </h3>
               <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
@@ -382,12 +382,12 @@ export default function ZapiIntegrationPage() {
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.3, delay: i * 0.05 }}
                     viewport={{ once: true }}
-                    className="bg-white/5 border border-white/10 rounded-lg p-4"
+                    className="bg-zinc-50 dark:bg-white/5 border border-zinc-200 dark:border-white/10 rounded-lg p-4"
                   >
                     <div className="flex items-center justify-between mb-2">
-                      <span className="text-white font-semibold text-sm">{tech.name}</span>
+                      <span className="text-zinc-900 dark:text-white font-semibold text-sm">{tech.name}</span>
                     </div>
-                    <p className="text-gray-400 text-xs leading-relaxed">{tech.desc}</p>
+                    <p className="text-zinc-600 dark:text-zinc-400 text-xs leading-relaxed">{tech.desc}</p>
                   </motion.div>
                 ))}
               </div>
@@ -395,8 +395,8 @@ export default function ZapiIntegrationPage() {
 
             {/* Infraestrutura */}
             <div>
-              <h3 className="text-lg font-bold text-white mb-4 flex items-center gap-2">
-                <Database className="w-5 h-5 text-primary" />
+              <h3 className="text-lg font-bold text-zinc-900 dark:text-white mb-4 flex items-center gap-2">
+                <Database className="w-5 h-5 text-indigo-600 dark:text-indigo-400" />
                 Infraestrutura
               </h3>
               <div className="grid md:grid-cols-2 gap-4">
@@ -407,10 +407,10 @@ export default function ZapiIntegrationPage() {
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.3, delay: i * 0.05 }}
                     viewport={{ once: true }}
-                    className="bg-white/5 border border-white/10 rounded-lg p-4"
+                    className="bg-zinc-50 dark:bg-white/5 border border-zinc-200 dark:border-white/10 rounded-lg p-4"
                   >
-                    <span className="text-white font-semibold text-sm">{tech.name}</span>
-                    <p className="text-gray-400 text-xs leading-relaxed mt-1">{tech.desc}</p>
+                    <span className="text-zinc-900 dark:text-white font-semibold text-sm">{tech.name}</span>
+                    <p className="text-zinc-600 dark:text-zinc-400 text-xs leading-relaxed mt-1">{tech.desc}</p>
                   </motion.div>
                 ))}
               </div>
@@ -420,11 +420,11 @@ export default function ZapiIntegrationPage() {
       </section>
 
       {/* Fluxos de Dados */}
-      <section className="py-12 border-t border-white/5">
+      <section className="py-12 border-t border-zinc-200 dark:border-white/5">
         <div className="container mx-auto px-4">
           <motion.h2
             {...fadeIn}
-            className="text-2xl md:text-3xl font-heading font-bold text-white mb-10"
+            className="text-2xl md:text-3xl font-heading font-bold text-zinc-900 dark:text-white mb-10"
           >
             Fluxo de Operação
           </motion.h2>
@@ -432,9 +432,9 @@ export default function ZapiIntegrationPage() {
           <div className="space-y-6">
             <motion.div
               {...fadeIn}
-              className="bg-white/5 border border-white/10 rounded-xl p-6"
+              className="bg-zinc-50 dark:bg-white/5 border border-zinc-200 dark:border-white/10 rounded-xl p-6"
             >
-              <h3 className="text-lg font-bold text-white mb-4">
+              <h3 className="text-lg font-bold text-zinc-900 dark:text-white mb-4">
                 Ciclo de Conexão e Gerenciamento
               </h3>
               <div className="space-y-3">
@@ -447,10 +447,10 @@ export default function ZapiIntegrationPage() {
                   "Backend atualiza status e libera uso da API para envio de mensagens",
                 ].map((step, i) => (
                   <div key={i} className="flex items-start gap-3">
-                    <span className="text-primary font-mono text-sm font-bold min-w-[24px]">
+                    <span className="text-indigo-600 dark:text-indigo-400 font-mono text-sm font-bold min-w-[24px]">
                       {i + 1}.
                     </span>
-                    <p className="text-gray-400 text-sm">{step}</p>
+                    <p className="text-zinc-600 dark:text-zinc-400 text-sm">{step}</p>
                   </div>
                 ))}
               </div>
@@ -460,11 +460,11 @@ export default function ZapiIntegrationPage() {
       </section>
 
       {/* Conceitos Avançados */}
-      <section className="py-12 border-t border-white/5">
+      <section className="py-12 border-t border-zinc-200 dark:border-white/5">
         <div className="container mx-auto px-4">
           <motion.h2
             {...fadeIn}
-            className="text-2xl md:text-3xl font-heading font-bold text-white mb-10"
+            className="text-2xl md:text-3xl font-heading font-bold text-zinc-900 dark:text-white mb-10"
           >
             Conceitos Aplicados
           </motion.h2>
@@ -476,12 +476,12 @@ export default function ZapiIntegrationPage() {
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.3, delay: i * 0.05 }}
                 viewport={{ once: true }}
-                className="flex items-start gap-4 bg-white/5 border border-white/10 rounded-lg p-4"
+                className="flex items-start gap-4 bg-zinc-50 dark:bg-white/5 border border-zinc-200 dark:border-white/10 rounded-lg p-4"
               >
-                <div className="w-2 h-2 rounded-full bg-primary mt-2 shrink-0" />
+                <div className="w-2 h-2 rounded-full bg-indigo-600 dark:bg-indigo-500 mt-2 shrink-0" />
                 <div>
-                  <span className="text-white font-semibold text-sm">{item.concept}</span>
-                  <p className="text-gray-400 text-xs mt-1">{item.where}</p>
+                  <span className="text-zinc-900 dark:text-white font-semibold text-sm">{item.concept}</span>
+                  <p className="text-zinc-600 dark:text-zinc-400 text-xs mt-1">{item.where}</p>
                 </div>
               </motion.div>
             ))}
@@ -490,12 +490,12 @@ export default function ZapiIntegrationPage() {
       </section>
 
       {/* CTA / Voltar */}
-      <section className="py-16 border-t border-white/5">
+      <section className="py-16 border-t border-zinc-200 dark:border-white/5">
         <div className="container mx-auto px-4 text-center">
           <motion.div {...fadeIn}>
             <Link
               href="/#portfolio"
-              className="inline-flex items-center gap-2 bg-primary hover:bg-primary/90 text-white px-6 py-3 rounded-lg font-medium transition-colors"
+              className="inline-flex items-center gap-2 bg-indigo-600 hover:bg-indigo-700 text-white px-6 py-3 rounded-lg font-medium transition-colors"
             >
               <ArrowLeft className="w-4 h-4" />
               Voltar ao Portfólio

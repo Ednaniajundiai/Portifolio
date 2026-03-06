@@ -28,7 +28,7 @@ export function About() {
   ];
 
   return (
-    <section id="about" className="py-20 bg-zinc-950/50">
+    <section id="about" className="py-20 bg-zinc-50 dark:bg-zinc-950/50">
       <div className="max-w-7xl mx-auto px-4 md:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -39,15 +39,15 @@ export function About() {
         >
           {/* Coluna de Texto */}
           <div className="space-y-6">
-            <span className="inline-block py-1 px-3 rounded-full bg-indigo-500/10 text-indigo-400 text-sm font-mono border border-indigo-500/20">
+            <span className="inline-block py-1 px-3 rounded-full bg-indigo-500/10 text-indigo-600 dark:text-indigo-400 text-sm font-mono border border-indigo-500/20">
               Sobre Mim
             </span>
-            <h2 className="text-3xl md:text-4xl font-bold text-white">
+            <h2 className="text-3xl md:text-4xl font-bold text-zinc-900 dark:text-white">
               Engenharia e Negócios: <br />
-              <span className="text-zinc-500">Uma combinação poderosa.</span>
+              <span className="text-zinc-500 dark:text-zinc-500">Uma combinação poderosa.</span>
             </h2>
             
-            <div className="text-zinc-400 space-y-4 leading-relaxed">
+            <div className="text-zinc-600 dark:text-zinc-400 space-y-4 leading-relaxed">
               <p>
                 Minha trajetória não é linear, e isso é minha maior vantagem. Sou <strong>Engenheiro Eletricista</strong> por formação e construí uma carreira sólida de 10 anos em Supply Chain, liderando negociações estratégicas em multinacionais como Klabin e Food Brands.
               </p>
@@ -69,13 +69,13 @@ export function About() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="p-6 rounded-2xl bg-zinc-900/50 border border-zinc-800 hover:border-indigo-500/30 hover:bg-indigo-500/5 transition-all group"
+                className="p-6 rounded-2xl bg-white dark:bg-zinc-900/50 border border-zinc-200 dark:border-zinc-800 hover:border-indigo-500/30 hover:bg-indigo-500/5 transition-all group shadow-sm dark:shadow-none"
               >
-                <div className="w-10 h-10 rounded-lg bg-indigo-500/10 flex items-center justify-center mb-4 text-indigo-400 group-hover:scale-110 transition-transform">
+                <div className="w-10 h-10 rounded-lg bg-indigo-500/10 flex items-center justify-center mb-4 text-indigo-600 dark:text-indigo-400 group-hover:scale-110 transition-transform">
                   <item.icon size={20} />
                 </div>
-                <h3 className="text-lg font-semibold text-white mb-2">{item.title}</h3>
-                <p className="text-sm text-zinc-400">{item.description}</p>
+                <h3 className="text-lg font-semibold text-zinc-900 dark:text-white mb-2">{item.title}</h3>
+                <p className="text-sm text-zinc-600 dark:text-zinc-400">{item.description}</p>
               </motion.div>
             ))}
           </div>

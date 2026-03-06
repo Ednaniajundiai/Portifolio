@@ -15,17 +15,17 @@ export function Hero() {
         transition={{ duration: 0.5 }}
         className="max-w-3xl flex-1"
       >
-        <span className="inline-block py-1 px-3 rounded-full bg-indigo-500/10 text-indigo-400 text-sm font-mono mb-6 border border-indigo-500/20">
-          Desenvolvedor Full Stack
+        <span className="inline-block py-1 px-3 rounded-full bg-indigo-500/10 text-indigo-600 dark:text-indigo-400 text-sm font-mono mb-6 border border-indigo-500/20">
+          Desenvolvimento de Sites e Sistemas
         </span>
         
-        <h1 className="text-5xl md:text-7xl font-bold tracking-tight text-white mb-6 leading-tight">
-          Ednan Ferreira <br />
-          <span className="text-zinc-500"></span>
+        
+        <h1 className="text-5xl md:text-7xl font-bold tracking-tight text-zinc-900 dark:text-white mb-6 leading-tight">
+          Ednan Ferreira
         </h1>
         
-        <p className="text-xl text-zinc-400 mb-8 max-w-2xl leading-relaxed">
-          Desenvolvo ativos digitais de alta performance focados em redução de custos operacionais e maximização de lucros. Engenharia de software com visão estratégica de negócios.
+        <p className="text-xl text-zinc-600 dark:text-zinc-400 mb-8 max-w-2xl leading-relaxed">
+          Transformo suas ideias em ferramentas de vendas. Desenvolvo <strong className="text-zinc-900 dark:text-zinc-200">Landing Pages</strong> que convertem visitantes em clientes e <strong className="text-zinc-900 dark:text-zinc-200">Sistemas Web</strong> que organizam e automatizam o seu dia a dia. Meu foco é entregar tecnologia que não apenas funciona, mas que impulsiona o crescimento do seu negócio com velocidade e segurança.
         </p>
 
         <div className="flex flex-wrap gap-4">
@@ -38,7 +38,7 @@ export function Hero() {
           
           <Link 
             href="#contact"
-            className="px-6 py-3 border border-zinc-700 text-zinc-300 hover:bg-zinc-800 rounded-lg font-medium transition-all"
+            className="px-6 py-3 border border-zinc-300 dark:border-zinc-700 text-zinc-700 dark:text-zinc-300 hover:bg-zinc-100 dark:hover:bg-zinc-800 rounded-lg font-medium transition-all"
           >
             Entrar em Contato
           </Link>
@@ -46,13 +46,13 @@ export function Hero() {
 
         <div className="mt-8 md:mt-10 flex flex-col gap-3">
           <span className="text-xs font-semibold tracking-wider text-zinc-500 uppercase">
-            Tech Stack Principal
+            Principais Tecnologias
           </span>
           <div className="flex flex-wrap items-center gap-3">
             {techStack.map((item) => (
               <div 
                 key={item.label} 
-                className="group relative p-2 rounded-lg bg-zinc-900/50 border border-zinc-800/50 hover:border-indigo-500/30 hover:bg-indigo-500/10 transition-all duration-300 cursor-help"
+                className="group relative p-2 rounded-lg bg-zinc-100 dark:bg-zinc-900/50 border border-zinc-200 dark:border-zinc-800/50 hover:border-indigo-500/30 hover:bg-indigo-500/10 transition-all duration-300 cursor-help"
               >
                 {"imageSrc" in item ? (
                   <div className="relative w-5 h-5">
@@ -66,7 +66,7 @@ export function Hero() {
                 ) : (
                   <item.Icon size={20} style={{ color: item.color }} />
                 )}
-                <span className="absolute -top-8 left-1/2 -translate-x-1/2 px-2 py-1 bg-zinc-800 text-white text-xs rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none border border-zinc-700">
+                <span className="absolute -top-8 left-1/2 -translate-x-1/2 px-2 py-1 bg-white dark:bg-zinc-800 text-zinc-900 dark:text-white text-xs rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none border border-zinc-200 dark:border-zinc-700 shadow-sm">
                   {item.label}
                 </span>
               </div>
@@ -87,7 +87,7 @@ export function Hero() {
           src="/ednan_ferreira_da_silva.png"
           alt="Foto de Ednan Ferreira "
           fill
-          className="object-cover rounded-full border-4 border-zinc-900/50 shadow-2xl"
+          className="object-cover rounded-full border-4 border-white dark:border-zinc-900/50 shadow-2xl"
           priority
           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
         />

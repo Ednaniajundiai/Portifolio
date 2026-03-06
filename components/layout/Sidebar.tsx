@@ -26,7 +26,7 @@ export function Sidebar() {
       {/* Logo Area */}
       <div className="mb-8 flex items-center justify-between">
         <h1 className="text-xl font-bold font-mono tracking-tighter text-zinc-900 dark:text-white">
-          EDNAN<span className="text-indigo-500">.DEV</span>
+          EDNAN FERREIRA<span className="text-indigo-500"></span>
         </h1>
         <ThemeToggle />
       </div>

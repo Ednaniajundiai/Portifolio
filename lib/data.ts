@@ -6,6 +6,7 @@ import {
   SiPostgresql,
   SiRedis,
   SiDocker,
+  SiWhatsapp,
 } from "react-icons/si";
 
 export const techStack = [
@@ -16,6 +17,7 @@ export const techStack = [
   { Icon: SiRedis, label: "Redis", category: "data", color: "#DC382D" },
   { Icon: SiDocker, label: "Docker", category: "infra", color: "#2496ED" },
   { Icon: Workflow, label: "N8N", category: "integrations", color: "#FF6584", imageSrc: "/n8n_icon-logo_brandlogos.net_3mw34.png" },
+  { Icon: SiWhatsapp, label: "WhatsApp", category: "integrations", color: "#25D366" },
 ] as const;
 
 export const projects = [
